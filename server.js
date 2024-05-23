@@ -27,7 +27,7 @@ export default function(opt) {
 
     const app = new Koa();
     const router = new Router();
-
+/*
     router.get('/', async (ctx, next) => {
         const stats = manager.stats;
         ctx.body = {
@@ -35,7 +35,7 @@ export default function(opt) {
             mem: process.memoryUsage(),
         };
     });
-
+*/
     router.get('/api/status', async (ctx, next) => {
         const stats = manager.stats;
         ctx.body = {
