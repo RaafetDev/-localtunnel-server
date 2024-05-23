@@ -41,7 +41,7 @@ if (argv.help) {
 const server = CreateServer({
     max_tcp_sockets: 10,
     secure: true,
-    domain: 'localtunnel-server-6me7.onrender.com',
+    domain: 'ra.hs.vc',/*'localtunnel-server-6me7.onrender.com',*/
 });
 
 server.listen(80, '0.0.0.0', () => {
