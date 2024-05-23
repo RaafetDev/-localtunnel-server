@@ -44,7 +44,7 @@ const server = CreateServer({
     domain: 'localtunnel-server-6me7.onrender.com',
 });
 
-server.listen(argv.port, argv.address, () => {
+server.listen($PORT, '0.0.0.0', () => {
     debug('server listening on port: %d', server.address().port);
 });
 
