@@ -9,7 +9,7 @@ import Debug from 'debug';
 import CreateServer from '../server';
 
 const debug = Debug('localtunnel');
-
+/*
 const argv = optimist
     .usage('Usage: $0 --port [num]')
     .options('secure', {
@@ -37,11 +37,11 @@ if (argv.help) {
     optimist.showHelp();
     process.exit();
 }
-
+*/
 const server = CreateServer({
-    max_tcp_sockets: argv['max-sockets'],
-    secure: argv.secure,
-    domain: argv.domain,
+    max_tcp_sockets: 10,
+    secure: true,
+    domain: 'localtunnel-server-6me7.onrender.com',
 });
 
 server.listen(argv.port, argv.address, () => {
