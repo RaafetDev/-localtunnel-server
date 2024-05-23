@@ -28,6 +28,14 @@ export default function(opt) {
     const app = new Koa();
     const router = new Router();
 
+    router.get('/', async (ctx, next) => {
+        const stats = manager.stats;
+        ctx.body = {
+            tunnels: stats.tunnels,
+            mem: process.memoryUsage(),
+        };
+    });
+
     router.get('/api/status', async (ctx, next) => {
         const stats = manager.stats;
         ctx.body = {
